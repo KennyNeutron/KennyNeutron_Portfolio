@@ -43,8 +43,8 @@ export default function Hero() {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end relative">
             <div className="relative group">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
-              <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full border-4 border-background shadow-2xl overflow-hidden ring-1 ring-border/50">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-blue-600 blur-2xl opacity-75 group-hover:opacity-100 transition duration-500"></div>
+              <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full border-4 border-primary shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)] overflow-hidden">
                 <Image
                   src="/profile.jpg"
                   alt="Portrait of Kenny Neutron"
