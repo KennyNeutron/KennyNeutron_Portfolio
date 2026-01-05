@@ -65,7 +65,7 @@ export default function Projects() {
             >
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
-                  <Badge variant="secondary" className="mb-2">
+                  <Badge className="mb-2 bg-green-500/10 text-green-400 hover:bg-green-500/20 border-green-500/50 shadow-[0_0_10px_-3px_rgba(74,222,128,0.5)] transition-all">
                     {project.tag}
                   </Badge>
                 </div>
@@ -80,7 +80,11 @@ export default function Projects() {
                 {/* Optional: Add image/tech stack here later */}
               </CardContent>
               <CardFooter>
-                <Button asChild variant="outline" size="sm" className="w-full">
+                <Button
+                  asChild
+                  size="sm"
+                  className="w-full bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-white border border-blue-500/50 shadow-[0_0_10px_-3px_rgba(59,130,246,0.5)] transition-all"
+                >
                   <a
                     href={project.href}
                     target={project.href !== "#" ? "_blank" : "_self"}
