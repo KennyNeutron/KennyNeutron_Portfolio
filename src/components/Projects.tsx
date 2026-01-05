@@ -1,73 +1,98 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
 export default function Projects() {
   const projects = [
     {
       id: 1,
-      name: "E-Commerce Platform",
+      name: "AIDme Smart Watch",
       description:
-        "A full-stack e-commerce solution built with Next.js, Stripe, and Prisma.",
+        "A smart wearable for emergency response, securing 3rd Place at the Regional Invention Contest (2021).",
       href: "#",
+      tag: "Embedded System",
     },
     {
       id: 2,
-      name: "Dashboard Analytics",
+      name: "SIRENA AI",
       description:
-        "Real-time analytics dashboard using React, D3.js, and WebSockets.",
-      href: "#",
+        "An AI-powered drowning detection system. Co-founded this startup to save lives through technology.",
+      href: "https://www.facebook.com/Sirena.fb",
+      tag: "AI / Startup",
     },
     {
       id: 3,
-      name: "Social Media App",
+      name: "Rain Powered Generator",
       description:
-        "A social networking application featuring real-time messaging and media sharing.",
+        "An innovative energy solution that converts rain into power. Top 3 at the Intel Science & Technology Fair (2013).",
       href: "#",
+      tag: "Green Tech",
     },
-    // Add more projects as needed
+    {
+      id: 4,
+      name: "Mosquito Repellent Bracelet",
+      description:
+        "Electronic wearable to repel mosquitoes, winning the Regional Invention Contest (2017).",
+      href: "#",
+      tag: "Wearable Tech",
+    },
   ];
 
   return (
-    <div id="projects" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Recent Projects
+    <section id="projects" className="py-24 md:py-32">
+      <div className="container px-4 md:px-8 mx-auto">
+        <div className="mb-12 md:mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+            Featured Projects
           </h2>
-          <p className="mt-2 text-lg leading-8 text-muted-foreground">
-            A selection of projects that showcase my skills and passion for
-            development.
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            From embedded systems to AI-powered applications, here are some of
+            the innovations I've brought to life.
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <div
+            <Card
               key={project.id}
-              className="group/card flex max-w-xl flex-col items-start justify-between p-6 rounded-2xl shadow-sm transition-all border border-white/10 bg-white/5 hover:border-primary/50 hover:shadow-[0_0_30px_-5px_hsl(217,91%,60%,0.3)] backdrop-blur-sm"
+              className="group hover:-translate-y-1 transition-all duration-300 hover:shadow-lg border-muted bg-card/50 backdrop-blur-sm"
             >
-              <div className="flex items-center gap-x-4 text-xs">
-                <time dateTime="2023-01-01" className="text-muted-foreground">
-                  Jan 2026
-                </time>
-                <a
-                  href={project.href}
-                  className="relative z-10 rounded-full bg-secondary px-3 py-1.5 font-medium text-secondary-foreground hover:bg-secondary/80"
-                >
-                  Full Stack
-                </a>
-              </div>
-              <div className="group relative">
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-card-foreground group-hover:text-primary">
-                  <a href={project.href}>
-                    <span className="absolute inset-0" />
-                    {project.name}
-                  </a>
-                </h3>
-                <p className="mt-5 line-clamp-3 text-sm leading-6 text-muted-foreground">
+              <CardHeader>
+                <div className="flex justify-between items-start mb-2">
+                  <Badge variant="secondary" className="mb-2">
+                    {project.tag}
+                  </Badge>
+                </div>
+                <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                  {project.name}
+                </CardTitle>
+                <CardDescription className="line-clamp-3">
                   {project.description}
-                </p>
-              </div>
-            </div>
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                {/* Optional: Add image/tech stack here later */}
+              </CardContent>
+              <CardFooter>
+                <Button asChild variant="outline" size="sm" className="w-full">
+                  <a
+                    href={project.href}
+                    target={project.href !== "#" ? "_blank" : "_self"}
+                  >
+                    View Project
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
