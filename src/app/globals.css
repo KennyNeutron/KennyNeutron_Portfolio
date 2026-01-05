@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Deep Navy/Charcoal Background */
+  --background: hsl(222 47% 11%);
+  --foreground: hsl(210 40% 98%);
+
+  --card: hsl(222 47% 11%);
+  --card-foreground: hsl(210 40% 98%);
+
+  --popover: hsl(222 47% 11%);
+  --popover-foreground: hsl(210 40% 98%);
+
+  /* Electric Blue Primary */
+  --primary: hsl(217 91% 60%);
+  --primary-foreground: hsl(222 47% 11%);
+
+  --secondary: hsl(217 19% 27%);
+  --secondary-foreground: hsl(210 40% 98%);
+
+  --muted: hsl(217 19% 27%);
+  --muted-foreground: hsl(215 20% 65%);
+
+  --accent: hsl(217 19% 27%);
+  --accent-foreground: hsl(210 40% 98%);
+
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+
+  /* Neon Borders */
+  --border: hsl(217 19% 27%);
+  --input: hsl(217 19% 27%);
+  --ring: hsl(217 91% 60%);
+
+  --radius: 0.5rem;
+
+  /* Chart placeholders */
+  --chart-1: hsl(220 70% 50%);
+  --chart-2: hsl(160 60% 45%);
+  --chart-3: hsl(30 80% 55%);
+  --chart-4: hsl(280 65% 60%);
+  --chart-5: hsl(340 75% 55%);
+}
+
+.dark {
+  /* Same as root for consistency in this single-theme setup */
+  --background: hsl(222 47% 11%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222 47% 11%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222 47% 11%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(217 91% 60%);
+  --primary-foreground: hsl(222 47% 11%);
+  --secondary: hsl(217 19% 27%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(217 19% 27%);
+  --muted-foreground: hsl(215 20% 65%);
+  --accent: hsl(217 19% 27%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(217 19% 27%);
+  --input: hsl(217 19% 27%);
+  --ring: hsl(217 91% 60%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  }
 }
