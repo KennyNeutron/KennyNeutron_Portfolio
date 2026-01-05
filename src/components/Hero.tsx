@@ -13,11 +13,13 @@ export default function Hero() {
             </h1>
             <p className="max-w-xl text-lg text-muted-foreground sm:text-xl leading-relaxed">
               I'm{" "}
-              <span className="text-foreground font-semibold">
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">
                 Kenny Walter Diolola
               </span>{" "}
-              (Kenny Neutron), an inventor, entrepreneur, and passionate
-              advocate for innovation.
+              (Kenny Neutron), a developer with full-stack experience across
+              Mobile, Web and Desktop applications, delivering end-to-end
+              solutions from UI to backend and databases. I can also do embedded
+              systems which was my first expertise.
             </p>
             <div className="flex items-center gap-4 w-full justify-center lg:justify-start">
               <Button

@@ -16,7 +16,7 @@ export default function Projects() {
       name: "AIDme Smart Watch",
       description:
         "A smart wearable for emergency response, securing 3rd Place at the Regional Invention Contest (2021).",
-      href: "#",
+      href: "https://www.facebook.com/share/p/17oMhEUYQd/",
       tag: "Embedded System",
     },
     {
@@ -29,19 +29,19 @@ export default function Projects() {
     },
     {
       id: 3,
-      name: "Rain Powered Generator",
+      name: "PhlegmX",
       description:
-        "An innovative energy solution that converts rain into power. Top 3 at the Intel Science & Technology Fair (2013).",
+        "AI-powered lung examination for Tuberculosis detection using YOLO via Roboflow.",
       href: "#",
-      tag: "Green Tech",
+      tag: "AI / MedTech",
     },
     {
       id: 4,
-      name: "Mosquito Repellent Bracelet",
+      name: "AquaMate",
       description:
-        "Electronic wearable to repel mosquitoes, winning the Regional Invention Contest (2017).",
-      href: "#",
-      tag: "Wearable Tech",
+        "Automated Aquaculture Monitoring and Aeration System with real-time sensors and mobile control to optimize pond health and energy.",
+      href: "https://github.com/KennyNeutron/AquaMate",
+      tag: "IoT / AgriTech",
     },
   ];
 
@@ -61,7 +61,7 @@ export default function Projects() {
           {projects.map((project) => (
             <Card
               key={project.id}
-              className="group hover:-translate-y-1 transition-all duration-300 hover:shadow-lg border-muted bg-card/50 backdrop-blur-sm"
+              className="group hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/50 border-muted bg-card/50 backdrop-blur-sm"
             >
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">

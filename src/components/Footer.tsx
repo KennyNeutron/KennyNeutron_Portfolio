@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { Mail, Facebook, Send, MessageCircle, Gamepad2 } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -19,38 +20,38 @@ export default function Footer() {
           <div className="mt-8 md:mt-0 flex justify-center md:justify-end space-x-6">
             <a
               href="mailto:kennyneutron.hex@gmail.com"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Email"
             >
-              <span className="sr-only">Email</span>
-              📧
+              <Mail className="h-6 w-6" />
             </a>
             <a
-              href="https://www.facebook.com/kennyneutron2"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              href="https://www.facebook.com/dev.kennyneutron"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Facebook"
             >
-              <span className="sr-only">Facebook</span>
-              📘
+              <Facebook className="h-6 w-6" />
             </a>
             <a
               href="https://t.me/KennyNeutron"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Telegram"
             >
-              <span className="sr-only">Telegram</span>
-              ✈️
+              <Send className="h-6 w-6" />
             </a>
             <a
               href="https://wa.me/qr/JT54GPTKZLMBG1"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="WhatsApp"
             >
-              <span className="sr-only">WhatsApp</span>
-              💬
+              <MessageCircle className="h-6 w-6" />
             </a>
             <a
               href="https://discordapp.com/users/neutron7643"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Discord"
             >
-              <span className="sr-only">Discord</span>
-              👾
+              <Gamepad2 className="h-6 w-6" />
             </a>
           </div>
         </div>
