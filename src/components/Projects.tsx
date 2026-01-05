@@ -49,7 +49,7 @@ export default function Projects() {
     <section id="projects" className="py-24 md:py-32">
       <div className="container px-4 md:px-8 mx-auto">
         <div className="mb-12 md:mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl mb-4">
             Featured Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
