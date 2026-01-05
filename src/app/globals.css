@@ -5,35 +5,36 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Deep Navy/Charcoal Background */
-  --background: hsl(222 47% 11%);
+  /* Pitch Black Background */
+  --background: hsl(0 0% 0%);
   --foreground: hsl(210 40% 98%);
 
-  --card: hsl(222 47% 11%);
+  /* Slightly lighter black for cards to stand out */
+  --card: hsl(222 47% 4%);
   --card-foreground: hsl(210 40% 98%);
 
-  --popover: hsl(222 47% 11%);
+  --popover: hsl(222 47% 4%);
   --popover-foreground: hsl(210 40% 98%);
 
   /* Electric Blue Primary */
   --primary: hsl(217 91% 60%);
-  --primary-foreground: hsl(222 47% 11%);
+  --primary-foreground: hsl(0 0% 100%);
 
-  --secondary: hsl(217 19% 27%);
+  --secondary: hsl(217 19% 10%);
   --secondary-foreground: hsl(210 40% 98%);
 
-  --muted: hsl(217 19% 27%);
+  --muted: hsl(217 19% 10%);
   --muted-foreground: hsl(215 20% 65%);
 
-  --accent: hsl(217 19% 27%);
+  --accent: hsl(217 19% 10%);
   --accent-foreground: hsl(210 40% 98%);
 
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(210 40% 98%);
 
   /* Neon Borders */
-  --border: hsl(217 19% 27%);
-  --input: hsl(217 19% 27%);
+  --border: hsl(217 19% 15%);
+  --input: hsl(217 19% 15%);
   --ring: hsl(217 91% 60%);
 
   --radius: 0.5rem;
@@ -47,25 +48,33 @@
 }
 
 .dark {
-  /* Same as root for consistency in this single-theme setup */
-  --background: hsl(222 47% 11%);
+  /* Match root since we are forcing dark mode */
+  --background: hsl(0 0% 0%);
   --foreground: hsl(210 40% 98%);
-  --card: hsl(222 47% 11%);
+
+  --card: hsl(222 47% 4%);
   --card-foreground: hsl(210 40% 98%);
-  --popover: hsl(222 47% 11%);
+
+  --popover: hsl(222 47% 4%);
   --popover-foreground: hsl(210 40% 98%);
+
   --primary: hsl(217 91% 60%);
-  --primary-foreground: hsl(222 47% 11%);
-  --secondary: hsl(217 19% 27%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  --secondary: hsl(217 19% 10%);
   --secondary-foreground: hsl(210 40% 98%);
-  --muted: hsl(217 19% 27%);
+
+  --muted: hsl(217 19% 10%);
   --muted-foreground: hsl(215 20% 65%);
-  --accent: hsl(217 19% 27%);
+
+  --accent: hsl(217 19% 10%);
   --accent-foreground: hsl(210 40% 98%);
+
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(210 40% 98%);
-  --border: hsl(217 19% 27%);
-  --input: hsl(217 19% 27%);
+
+  --border: hsl(217 19% 15%);
+  --input: hsl(217 19% 15%);
   --ring: hsl(217 91% 60%);
 }
 

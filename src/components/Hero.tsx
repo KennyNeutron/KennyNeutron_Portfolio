@@ -2,29 +2,35 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+    <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center relative overflow-hidden">
+      <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-            Building digital experiences that matter
+          <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+            Building digital experiences <br /> that matter.
           </h1>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+          <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
             I'm Kenny Neutron, a full-stack developer passionate about creating
             intuitive and performant web applications.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#projects"
-              className="rounded-md bg-zinc-900 dark:bg-zinc-50 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-zinc-900 shadow-sm hover:bg-zinc-700 dark:hover:bg-zinc-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all"
+            <Button
+              asChild
+              className="rounded-full bg-primary hover:bg-primary/80 transition-all shadow-[0_0_20px_-5px_hsl(217,91%,60%)]"
             >
-              View Projects
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-semibold leading-6 text-zinc-900 dark:text-zinc-50"
+              <a href="#projects">View Projects</a>
+            </Button>
+            <Button
+              variant="ghost"
+              asChild
+              className="text-neutral-300 hover:text-white"
             >
-              Contact me <span aria-hidden="true">→</span>
-            </a>
+              <a href="#contact">
+                Contact me{" "}
+                <span aria-hidden="true" className="ml-2">
+                  →
+                </span>
+              </a>
+            </Button>
           </div>
         </div>
       </div>

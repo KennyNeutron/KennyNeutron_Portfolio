@@ -40,7 +40,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="flex max-w-xl flex-col items-start justify-between p-6 bg-card rounded-2xl shadow-sm ring-1 ring-border hover:ring-ring transition-all"
+              className="group/card flex max-w-xl flex-col items-start justify-between p-6 rounded-2xl shadow-sm transition-all border border-white/10 bg-white/5 hover:border-primary/50 hover:shadow-[0_0_30px_-5px_hsl(217,91%,60%,0.3)] backdrop-blur-sm"
             >
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime="2023-01-01" className="text-muted-foreground">
